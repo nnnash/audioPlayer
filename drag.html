@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+    
+  <title>Audio player</title>  
+  <link rel="stylesheet" href="style.css">
+    
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.0/jquery.min.js"></script>
+  <script src="equalizer.js"></script>
+  <script src="waveform.js"></script>
+  <script src="AudioControl.js"></script>
+  <script src="metadataParser.js"></script>
+  <script src="script.js"></script>
+</head>
+
+<body>
+    
+  <div id="dropZone">
+
+    <div id="container">
+      <div id="canvas">
+        <!--  -->
+      </div>
+
+      <div id="loadFileLayout">
+        <div class="mainButtonStyle">
+          <div class="mainButtonFontStyle">+</div>
+          <input type="file" name="select_file" id="file" size="1" class="inputStyle" accept="audio/*">
+        </div>
+      </div>
+
+      <div id="playFileLayout" style="display:none">
+        <div class="mainButtonStyle">
+          <div id="start" class="mainButtonFontStyle">&gt;</div>
+          <div id="stop" class="mainButtonFontStyle" style="display: none;">
+            <!--  -->
+          </div>
+        </div>
+        <div>
+          <div id="metadata">
+            <span id="artist"></span>
+            <span id="name"></span>
+            <div id="albumYear"></div>
+          </div>
+          <input id="volume" type="range">
+        </div>
+        <div id="clear">
+          x
+        </div>
+        <table id="equalizer">
+          <tr>
+            <td id="normal" class="chosen">normal</td>
+            <td id="rock">rock</td>
+            <td id="pop">pop</td>
+            <td id="jazz">jazz</td>
+            <td id="classic">classic</td>
+          </tr>
+        </table>
+      </div>
+
+    </div>
+  </div>
+  <div id="loading" style="display:none;">
+  	<span>Loading...</span>
+  </div>
+  
+</body>
+</html>	
